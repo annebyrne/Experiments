@@ -1,3 +1,6 @@
+require "spec_helper"
+require_relative "../classes/todolist"
+
 describe TodoList do
 
 	it "returns a list of [1, 2, 3] when the input is [1, 2, 3]" do
