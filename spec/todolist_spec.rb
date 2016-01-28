@@ -17,4 +17,11 @@ describe TodoList do
 		expect(result).to eq [1]
 	end
 
+	it "removes 1 from a list of [1, 2, 3] when the user requests it" do
+		todo_list = TodoList.new
+		original = [1, 2, 3].each {|task| todo_list.add_task(task) } 
+		result = original.delete(1)
+		expect(result).to eq [2, 3]
+	end
+
 end
