@@ -3,11 +3,13 @@ require_relative "../classes/todolist"
 
 describe TodoList do
 
-	it "always returns a list" do
+#write the smallest test possible
+	it "returns a list for every object " do
 		todo_list = TodoList.new
-		result = todo_list.initialize
+		result = todo_list.list
 		expect(result).to eq []
 	end
+
 =begin
 	it "returns a list of [1, 2, 3] when the input is [1, 2, 3]" do
 	todo_list = TodoList.new
@@ -15,5 +17,4 @@ describe TodoList do
 	expect(result).to eq [1, 2, 3]
 	end
 =end
-
 end
