@@ -10,11 +10,11 @@ describe TodoList do
 		expect(result).to eq []
 	end
 
-=begin
+
 	it "returns a list of [1, 2, 3] when the input is [1, 2, 3]" do
-	todo_list = TodoList.new
-	result = todo_list.initialize(1, 2, 3)
-	expect(result).to eq [1, 2, 3]
+		todo_list = TodoList.new
+		result = todo_list.add_task(1, 2, 3).list
+		expect(result).to eq [1, 2, 3]
 	end
-=end
+
 end
