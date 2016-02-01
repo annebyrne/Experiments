@@ -13,13 +13,13 @@ describe TodoList do
 
 	it "returns a list of 1 when the input is 1" do
 		todo_list = TodoList.new
-		result = todo_list.add_task(1)
+		result = todo_list.add_tasks(1)
 		expect(result).to eq [1]
 	end
 
 	it "removes 1 from a list of [1, 2, 3] when the user requests it" do
 		todo_list = TodoList.new
-		original = [1, 2, 3].each {|task| todo_list.add_task(task) } 
+		original = todo_list.add_task[1, 2, 3]
 		result = original.delete(1)
 		expect(result).to eq [2, 3]
 	end

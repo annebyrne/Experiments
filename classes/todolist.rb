@@ -9,11 +9,15 @@ class TodoList
 
 #add new tasks to list
 	
-	def add_task(tasks)
-		@list << task
+	def add_tasks(tasks)
+		@list.push(tasks)
 	end
 
 #remove tasks from a list
-	
+
+	def delete(tasks)
+		@list.delete("tasks")
+		@list
+	end
 
 end
