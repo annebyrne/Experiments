@@ -7,17 +7,12 @@ class TodoList
 		@list = []
 	end
 
-#add new tasks to list
+#add new task to list
 	
-	def add_tasks(tasks)
-		@list.push(tasks)
+	def add_task(task)
+		@list << task
 	end
 
-#remove tasks from a list
-
-	def delete(tasks)
-		@list.delete("tasks")
-		@list
-	end
+#no built in removal method, use the standard delete method
 
 end
