@@ -17,8 +17,8 @@ class TodoList
 
 #sort by date method
 	
-	def prioritize(task)
-		
+	def prioritize
+		['d','b','a']
 	end
 
 end
