@@ -1,11 +1,14 @@
 class TodoTask 
 
+	attr_accessor :name, :deadline
+
+	require 'time'
+
 	def initialize(name, deadline)
 		@name = name
-		@deadline = deadline
+		@dead = false
 		@done = false
 	end
-
 
 
 end

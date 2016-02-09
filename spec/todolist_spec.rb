@@ -38,9 +38,9 @@ describe TodoList do
 
 	it "sorts the following tasks ('shopping', 'gym', 'laundry') by their deadline" do
 		todo_list = TodoList.new
-		shopping = TodoTask.new(shopping, 27/1/16)
-		gym = TodoTask.new(gym, 8/2/16)
-		laundry = TodoTask.new(laundry, 25/1/16)
+		shopping = TodoTask.new(shopping, '27/1/16')
+		gym = TodoTask.new(gym, '8/2/16')
+		laundry = TodoTask.new(laundry, '25/1/16')
 		[shopping, gym, laundry].each {|task| todo_list.add_task(task)}
 		result = todo_list.prioritize
 		expect(result).to eq ['laundry','shopping','gym']
