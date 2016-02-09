@@ -16,6 +16,9 @@ class TodoList
 #no built in removal method, use the standard delete method
 
 #sort by date method
-
+	
+	def prioritize(task)
+		
+	end
 
 end

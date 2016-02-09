@@ -26,11 +26,13 @@ describe TodoList do
 	end
 =end	
 
-	it "sorts tasks (a, b, d) by their  date" do
+#were interested in the behaviour. what behaviour do we want to evaluate
+
+	it "sorts tasks ('a','b','d') by their  date" do
 		todo_list = TodoList.new
-		list = [a, b, d].each {|task| todo_list.add_task(task) }
+		list = ['a','b','d'].each {|task| todo_list.add_task(task) }
 		result = list.prioritize
-		expect(result).to eq [d, b, a]
+		expect(result).to eq ['d','b','a']
 	end
 
 #helper method
