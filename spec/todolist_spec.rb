@@ -35,6 +35,12 @@ describe TodoList do
 		expect(result).to eq ['d','b','a']
 	end
 
+	it "sorts the following tasks ('shopping', 'gym', 'laundry') by their deadline" do
+		todo_list = TodoList.new
+		['shopping', 'gym', 'laundry'].each {|task| todo_list.add_task(task)}
+		result = todo_list.prioritize
+		expect(result).to eq ['laundry','shopping','gym']
+	end
 #helper method
 
 end
