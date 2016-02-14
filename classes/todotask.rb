@@ -2,8 +2,6 @@ class Time
 	require 'time'
 end
 
-
-
 class TodoTask 
 
 	attr_accessor :name, :deadline
@@ -14,17 +12,8 @@ class TodoTask
 		@deadline = deadline
 	end
 
-	def to_s
+	def to_v
 		@name
 	end
-=begin
-#parse dates? why isn't it working?
-	def date_type(deadline)
-		if deadline.is_a? String == true
-			deadline.to_datetime!
-		end
-	end
-=end
-
 
 end

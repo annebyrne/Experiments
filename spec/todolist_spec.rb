@@ -48,6 +48,15 @@ describe TodoList do
 		result  = todo_list.prioritize
 		expect(result).to eq ['laundry','shopping','gym']
 	end
+
+
+	it "marks todo_tasks as done" do
+		todo_list = TodoList.new
+		homework = TodoTask.new('homework', '28/9/12')
+		todo_list.add_task(homework)
+		result = todo_list.complete(homework)
+		expect(result).to eq 'done'
+	end
 #helper method
 
 

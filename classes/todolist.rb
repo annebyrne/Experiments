@@ -19,14 +19,14 @@ class TodoList
 
 	def prioritize
 	#need a list object, which is an array of tasks
-		@list.sort_by! {|task| task.deadline}
+		@list.sort_by! { |task| task.deadline}
 		#load
-		@list.map {|task| task.to_s}
+		@list.map {|task| task.to_v}
 	end
 
 	def display
 		frame = []
-		frame = @list.each {|task| task.to_s}
+		frame = @list.each {|task| task.to_v}
 		return frame
 	end
 
