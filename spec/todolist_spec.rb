@@ -31,21 +31,25 @@ describe TodoList do
 
 	it "sorts tasks ('a','b','d') by their  date" do
 		todo_list = TodoList.new
-		['a','b','d'].each {|task| todo_list.add_task(task) }
+		a = TodoTask.new('a', '24/7/15')
+		b = TodoTask.new('b', '19/7/15')
+		d = TodoTask.new('d', '1/7/15')
+		[a, b, d].each {|task| todo_list.add_task(task) }
 		result = todo_list.prioritize
 		expect(result).to eq ['d','b','a']
 	end
 
 	it "sorts the following tasks ('shopping', 'gym', 'laundry') by their deadline" do
 		todo_list = TodoList.new
-		shopping = TodoTask.new(shopping, '27/1/16')
-		gym = TodoTask.new(gym, '8/2/16')
-		laundry = TodoTask.new(laundry, '25/1/16')
+		shopping = TodoTask.new('shopping', '27/1/16')
+		gym = TodoTask.new('gym', '8/2/16')
+		laundry = TodoTask.new('laundry', '25/1/16')
 		[shopping, gym, laundry].each {|task| todo_list.add_task(task)}
-		result = todo_list.prioritize
+		result  = todo_list.prioritize
 		expect(result).to eq ['laundry','shopping','gym']
 	end
 #helper method
+
 
 end
 
