@@ -16,4 +16,8 @@ class TodoTask
 		@name
 	end
 
+	def mark_done
+		@done = true
+	end
+
 end

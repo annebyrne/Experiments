@@ -31,7 +31,7 @@ class TodoList
 	end
 
 	def complete(task)
-
+		task.mark_done
 	end
 
 
