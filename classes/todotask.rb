@@ -4,7 +4,7 @@ end
 
 class TodoTask 
 
-	attr_accessor :name, :deadline
+	attr_accessor :name, :deadline, :done
 
 	def initialize(name, deadline)
 		@name = name

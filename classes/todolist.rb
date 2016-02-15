@@ -32,6 +32,10 @@ class TodoList
 
 	def complete(task)
 		task.mark_done
+		if task.done == true
+			@list.delete(task)
+		end
+		@list
 	end
 
 
