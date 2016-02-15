@@ -18,17 +18,6 @@ describe TodoList do
 		expect(result).to eq [1]
 	end
 
-=begin redundant method
-	it "removes x from a list of ['a','x','c'] when the user requests it" do
-		todo_list = TodoList.new
-		original = todo_list.add_tasks('a','x','c')
-		result = original.remove('x')
-		expect(result).to eq ['a','c']
-	end
-=end	
-
-#were interested in the behaviour. what behaviour do we want to evaluate
-
 	it "sorts tasks ('a','b','d') by their  date" do
 		todo_list = TodoList.new
 		a = TodoTask.new('a', '24/7/15')
@@ -50,12 +39,12 @@ describe TodoList do
 	end
 
 
-	it "marks todo_tasks as done" do
+	it "removes tasks from the todo list once their state is marked as done" do
 		todo_list = TodoList.new
 		homework = TodoTask.new('homework', '28/9/12')
 		todo_list.add_task(homework)
 		result = todo_list.complete(homework)
-		expect(result).to eq 'done'
+		expect(result).to eq ''
 	end
 #helper method
 

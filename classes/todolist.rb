@@ -30,4 +30,9 @@ class TodoList
 		return frame
 	end
 
+	def complete(task)
+
+	end
+
+
 end
