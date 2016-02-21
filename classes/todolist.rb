@@ -1,10 +1,11 @@
 class TodoList 
 
 #getter method
-	attr_reader :list
+	attr_reader :list, :taglist
 	
 	def initialize
 		@list = []
+		@taglist = TagList.new
 	end
 
 #add new task to list
@@ -38,5 +39,13 @@ class TodoList
 		@list
 	end
 
+	def add_tag(tag, task)	
+		@taglist = {tag => task.to_v} 
+		@taglist.assoc(tag)
+	end
+	
+	def tagged_with(tag)
+		@taglist.assoc(tag)
+	end
 
 end

@@ -1,6 +1,7 @@
 require "spec_helper"
 require_relative "../classes/todolist"
 require_relative "../classes/todotask"
+require_relative "../classes/tag_list.rb"
 
 describe TodoList do
 
@@ -51,10 +52,9 @@ describe TodoList do
 		todo_list = TodoList.new
 		pricing = TodoTask.new('pricing rota', '22/2/16')
 		todo_list.add_task(pricing)
-		result = pricing.add_tag(work)
-		expect(result).to eq 'work'
+		result = todo_list.add_tag('work', pricing)
+		expect(result).to eq ['work', 'pricing rota']
 	end
 
 end
-
 
