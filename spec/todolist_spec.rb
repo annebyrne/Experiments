@@ -44,10 +44,16 @@ describe TodoList do
 		homework = TodoTask.new('homework', '28/9/12')
 		todo_list.add_task(homework)
 		result = todo_list.complete(homework)
-		expect(result).to eq ''
+		expect(result).to eq []
 	end
-#helper method
 
+	it "adds tag Work to the pricing task" do
+		todo_list = TodoList.new
+		pricing = TodoTask.new('pricing rota', '22/2/16')
+		todo_list.add_task(pricing)
+		result = pricing.add_tag(work)
+		expect(result).to eq 'work'
+	end
 
 end
 
